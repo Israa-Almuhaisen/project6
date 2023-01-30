@@ -20,11 +20,12 @@
     </div>
 
     <div class="controls">
-        <span data-src="images/vid-1.mp4"></span>
+        <span data-src="images/vvv.mp4"></span>
         
     </div>
 
     <div class="video-container">
+        <video src="images/vvv.mp4"  loop autoplay muted></video>
     </div>
 
 </section>
