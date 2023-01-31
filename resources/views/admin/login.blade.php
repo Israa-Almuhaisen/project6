@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="logo.png">
-    <title>Checker</title>
+    <title>Joy Water</title>
     <script src="https://kit.fontawesome.com/73358cb070.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('assets/login.css')}}">
     <style>
