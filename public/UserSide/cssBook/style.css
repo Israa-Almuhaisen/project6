@@ -176,8 +176,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(to bottom,#000000,#0e294773),
-     url(/images/bookNow.png);
+    /* background: linear-gradient(to bottom,#000000,#0e294773),     url(/images/bookNow.png); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
