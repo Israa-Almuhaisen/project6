@@ -106,7 +106,9 @@
 
 
                 <h3>Hour</h3>
-                <select name="time" id="cars">
+                <select name="time" style="
+                font-size: 20px;
+            ">
                     <option value="10">10:00:am</option>
                     <option value="11">11:00:am</option>
                     <option value="12">12:00:am</option>
