@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Search;
 use App\Http\Controllers\User\ActivityDetailsController;
+use App\Http\Controllers\User\EditBookController;
 use App\Http\Controllers\User\MyreservatController;
 use App\Http\Controllers\User\BookController;
 use App\Http\Controllers\User\RegisterUserController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\Admin\ActivityController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\ContactUsFormController;
 use App\Http\Controllers\User\MyreservController;
+// use App\Http\Controllers\User\EditBookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -123,8 +125,9 @@ Route::prefix('user')->name('user.')->group(function () {
     Route::get('/booking/create/{id}',[BookController::class,'create'])->name('book.create')->middleware('CheckLogin');
     
     Route::resource('/myreserve',MyreservController::class);
+    Route::get('/myreserve/update/{id}',[EditBookController::class,'update'])->name('edit.book');
     });
-Route::get('/myResevation/edit', function () {
-    return view('myResevation.edit');
-});
+// Route::get('/myResevation/edit', function () {
+//     return view('myResevation.edit');
+// });
 

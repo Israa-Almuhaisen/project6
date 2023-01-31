@@ -52,8 +52,8 @@
 
         @csrf
         <input type="text" name="search" id="search-bar" placeholder="search here...">
-
-       {{-- <button type="submit"><i style="font-size: 30px; margin=10px" class="fas fa-search"></li></button> --}}
+        <label for="search-bar" ><input type="submit" id="search-bar" value="search"/></label>
+       
     </form>
 </header>
 

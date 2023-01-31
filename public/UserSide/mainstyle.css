@@ -155,12 +155,14 @@ header .search-bar-container #search-bar{
 header .search-bar-container label{
   color:#fff;
   cursor: pointer;
-  font-size: 3rem;
+  /* font-size: 3rem; */
   margin-left: 1.5rem;
 }
 
-header .search-bar-container label:hover{
-  color:var(--secodery-color) !important;
+header .search-bar-container label input:hover{
+  /* background-color:#FFC11A  ; */
+  color: #FFC11A !important;
+  /* color:var(--secodery-color) !important; */
 } 
 
 

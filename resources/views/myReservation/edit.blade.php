@@ -39,22 +39,21 @@
 {{-- {{dd($key['data']['id'])}} --}}
 
 <section class="book" id="book">
-{{-- @foreach ($booking as $item)
-     {{dd($item->id)}}
-@endforeach --}}
+@foreach ($reservation as $item)
+   
+@endforeach
    
     <div class="row">
+           
 
-       
-
-        <form action="{{Route('user.myreserve.update',$value['id'])}}" method="POST">
+        <form action="{{Route('user.edit.book',$reservation[0]->id)}}" method="POST">
             @method('GET')
             @csrf
 
             <div class="inputBox">
                 <h3>First Name</h3>
-                <input type="text" class="form-control bg-transparent" id="name" placeholder="First Name" name="first_name" value="{{ old('first_name')}}" class="@error('first_name') is-invalid @enderror">
-                <input type="hidden" class="form-control bg-transparent" id="name" placeholder="First Name" name="user_id" value="{{ Auth::user()->id }}">
+                <input type="text" class="form-control bg-transparent" id="name" placeholder="First Name" name="first_name" value="{{ $reservation[0]->first_name}}" class="@error('first_name') is-invalid @enderror">
+                <input type="hidden" class="form-control bg-transparent" id="name" placeholder="First Name" name="activity_id" value="{{ $reservation[0]->activity_id}}">
                 @error('first_name')
                 <div class="alert alert-danger">{{ $message }}</div>
                @enderror
@@ -63,7 +62,7 @@
 
 
                 <h3>Last Name</h3>
-                <input type="text" class="form-control bg-transparent" id="name" placeholder="Last Name" name="last_name" value="{{ old('last_name')}}" class="@error('last_name') is-invalid @enderror">
+                <input type="text" class="form-control bg-transparent" id="name" placeholder="Last Name" name="last_name" value="{{ $reservation[0]->last_name}}" class="@error('last_name') is-invalid @enderror">
                 @error('last_name')
                 <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -73,7 +72,7 @@
 
 
                 <h3>Phone Number</h3>
-                <input type="text" class="form-control bg-transparent" id="name" placeholder="Phone Number" name="phoneNumber" value="{{ old('phoneNumber')}}" class="@error('phoneNumber') is-invalid @enderror">
+                <input type="text" class="form-control bg-transparent" id="name" placeholder="Phone Number" name="phoneNumber" value="{{ $reservation[0]->phoneNumber}}" class="@error('phoneNumber') is-invalid @enderror">
                 @error('phoneNumber')
                 <div class="alert alert-danger">{{ $message }}</div>
                @enderror
@@ -83,8 +82,10 @@
 
 
                 <h3>Number of guest</h3>
-                <input type="number" class="form-control bg-transparent" id="name" placeholder="Guest Number" min="1" value="1" name="guest_number">
-
+                <input type="number" class="form-control bg-transparent" id="name" placeholder="Guest Number" min="1" value="{{ $reservation[0]->guest_number}}" class="@error('number_of_guest') is-invalid @enderror" name="number_of_guest">
+                @error('number_of_guest')
+                <div class="alert alert-danger">{{ $message }}</div>
+               @enderror
 
 
             </div>
@@ -92,7 +93,7 @@
 
 
                 <h3>Your Email</h3>
-                <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email" name="email" value="{{ old('email')}}" class="@error('email') is-invalid @enderror">
+                <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email" name="email" value="{{ $reservation[0]->email}}" class="@error('email') is-invalid @enderror">
                 @error('email')
                 <div class="alert alert-danger">{{ $message }}</div>
                @enderror
@@ -123,7 +124,7 @@
 
 
                 <h3>Date</h3>
-                <input type="date" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date" data-target="#date3" data-toggle="datetimepicker" name="res_date" value="{{ old('res_date')}}" class="@error('res_date') is-invalid @enderror" />
+                <input type="date" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date" data-target="#date3" data-toggle="datetimepicker" name="res_date" value="{{ $reservation[0]->res_date}}" class="@error('res_date') is-invalid @enderror" />
                 @error('res_date')
                 <div class="alert alert-danger">{{ $message }}</div>
                @enderror

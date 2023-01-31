@@ -47,9 +47,9 @@ class ActivityController extends Controller
         // ]);
         // return $image;
         $photoName = $request->file('activity_image1')->getClientOriginalName();
-        $request->file('activity_image1')->storeAs('public/image', $photoName);
+        $request->file('activity_image1')->storeAs('image', $photoName);
         $photoName2 = $request->file('activity_image2')->getClientOriginalName();
-        $request->file('activity_image2')->storeAs('public/image', $photoName2);
+        $request->file('activity_image2')->storeAs('image', $photoName2);
 
         $data = new Activity;
 
