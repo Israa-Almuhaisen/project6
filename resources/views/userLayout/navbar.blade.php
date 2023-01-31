@@ -2,13 +2,13 @@
 
     <div id="menu-bar" class="fas fa-bars"></div>
 
-    <a href="#" class="logo"><span style="color: #04448C ; background-color:aliceblue;border-radius: 10rem; padding-left:.9rem; padding-right:.7rem;">Joy</span><span style="color: #FFC11A !important;"> Water</span></a>
+    <a href="#" class="logo"><span style="color: #04448C ; background-color:aliceblue;border-radius: .5rem; padding-left:.9rem; padding-right:.7rem;">Joy</span><span style="color: #FFC11A !important;"> Water</span></a>
 
     <nav class="navbar">
-        <a href="{{route('user.index')}}">home</a>
-        <a href="{{route('user.show')}}">Activity</a>
-        <a href="{{route('user.about')}}">about</a>
-        <a href="{{route('user.contact')}}">contact</a>
+        <a class="me-5" href="{{route('user.index')}}">home</a>
+        <a class="me-5" href="{{route('user.show')}}">Activity</a>
+        <a class="me-5" href="{{route('user.about')}}">about</a>
+        <a class="me-5" href="{{route('user.contact')}}">contact</a>
     </nav>
 
     <div class="icons">
