@@ -215,42 +215,6 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
                 <h1  style="font-size:30px !important" class="mb-5">Meet Our Guide</h1>
             </div>
             <div class="row g-5 justify-content-center" >
-                <div class="col-lg-3 col-md-4 wow fadeInUp m-5 " data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden " style="height:300px;">
-                            <img class="img-fluid rounded" src="../images/israa.jpg" alt="">
-                        </div>
-                        <div class="text-center p-4">
-                            <h5  style="font-size:20px;"class="mb-0">first & last Name</h5>
-                            <small>UI UX Designer </small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden" style="height:300px;">
-                            <img class="img-fluid rounded" src="../images/shimaa.jpg" alt="" height="300px" >
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
-                            <small>UI UX Designer </small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
-                    <div class="team-item">
-                        <div class="overflow-hidden" style="height:300px;">
-                            <img class="img-fluid rounded" src="../images/people2.jpg" alt="" height="300px" >
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
-                            <small>UI UX Designer </small>
-                        </div>
-                    </div>
-                </div>
-
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
@@ -258,8 +222,32 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
                             <img class="img-fluid rounded" src="../images/ahmad.jpeg" alt="" >
                         </div>
                         <div class="text-center p-4">
-                            <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
+                            <h5 style="font-size:20px;" class="mb-0">Ahmad</h5>
                             <small>Programmer</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 wow fadeInUp m-5 " data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden " style="height:300px;">
+                            <img class="img-fluid rounded" src="../images/shimaa.jpg" alt="">
+                        </div>
+                        <div class="text-center p-4">
+                            <h5  style="font-size:20px;"class="mb-0">Shima'a</h5>
+                            <small>Programmer</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden" style="height:300px;">
+                            <img class="img-fluid rounded" src="../images/Bara'a.jpeg" alt="" height="300px" >
+                        </div>
+                        <div class="text-center p-4">
+                            <h5 style="font-size:20px;" class="mb-0">Bra'a</h5>
+                            <small>UI UX Designer</small>
                         </div>
                     </div>
                 </div>
@@ -267,10 +255,25 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden" style="height:300px;">
-                            <img class="img-fluid rounded" src="../img/team-1.jpg" alt="" >
+                            <img class="img-fluid rounded" src="../images/israa.jpg" alt="" height="300px" >
                         </div>
                         <div class="text-center p-4">
-                            <h5  style="font-size:20px;" class="mb-0">first & last Name</h5>
+                            <h5 style="font-size:20px;" class="mb-0">Isra'a</h5>
+                            <small>Product Owner</small>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
+                    <div class="team-item">
+                        <div class="overflow-hidden" style="height:300px;">
+                            <img class="img-fluid rounded" src="../images/Amro.jpeg" alt="" >
+                        </div>
+                        <div class="text-center p-4">
+                            <h5  style="font-size:20px;" class="mb-0">Amro</h5>
                             <small>scrum master</small>
                         </div>
                     </div>

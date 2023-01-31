@@ -60,7 +60,7 @@
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Reservation                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">2</span>
+                <span class="badge badge-info right"></span>
               </p>
             </a>
             <ul class="nav nav-treeview">
