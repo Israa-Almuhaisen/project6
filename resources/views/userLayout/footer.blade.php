@@ -4,24 +4,21 @@
 
         <div class="box">
             <h3>about us</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas magni pariatur est accusantium voluptas enim nemo facilis sit debitis.</p>
+            <p>The Standard State Is Most Often Defined As Pure Water At The Same Temperature. Using This Particular Definition, Pure Distilled Water Has A Water Activity Of Exactly One.</p>
         </div>
-        <div class="box">
+        {{-- <div class="box">
             <h3>branch locations</h3>
             <a href="#">bangladesh</a>
             <a href="#">USA</a>
             <a href="#">japan</a>
             <a href="#">Turkey</a>
-        </div>
+        </div> --}}
         <div class="box">
             <h3>quick links</h3>
-            <a href="#">home</a>
-            <a href="#">book</a>
-            <a href="#">packages</a>
-            <a href="#">services</a>
-            <a href="#">gallery</a>
-            <a href="#">review</a>
-            <a href="#">contact</a>
+            <a href="{{route('user.index')}}">home</a>
+            <a href="{{route('user.show')}}">Activity</a>
+            <a href="{{route('user.about')}}">about</a>
+            <a href="{{route('user.contact')}}">contact</a>
         </div>
         <div class="box">
             <h3>follow us</h3>
