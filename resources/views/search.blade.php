@@ -19,20 +19,18 @@
 </div>
 
 <section class="packages" id="packages">
-
+<br><br><br><br>
     <h1 class="heading">
+        <span>S</span>
+        <span>E</span>
         <span>A</span>
-        <span>c</span>
+        <span>R</span>
+        <span>C</span>
+        <span>H</span>
         <span>t</span>
-        <span>i</span>
-        <span>v</span>
-        <span>i</span>
-        <span>t</span>
-        <span>i</span>
-        <span>e</span>
-        <span>s</span>
+        
     </h1>
-
+<br>
     <div class="box-container">
 
 

@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/singleCSS/SINGLEmain.css">
     <!-- Template Stylesheet -->
-    <link href="/UserSide/cssBook/style.css" rel="stylesheet">
+    <link href="/UserSide/cssBook/style.css" rel="stylesheet">@foreach ($data as $activitydata)
     <style>
     .hero-header{
-        background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , url(/images/showMyReserv.jpg) !important;
+        background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  ,  url("{{ URL::asset("storage/image/".$activitydata->image2)}}") !important;
  background-position: center center;
  background-repeat: no-repeat;
  background-size: cover;
@@ -31,7 +31,7 @@
 
 {{-- ============= showCase =============== --}}
 @section('showCase')
-@foreach ($data as $activitydata)
+
    <div class="container-fluid position-relative p-0">
         <div class="container-fluid  py-5 mb-5 hero-header">
             <div class="container py-5">
@@ -57,7 +57,7 @@
             <div class="row m-0">
                 <div class="col-lg-5 col-md-12 p-0 me-5" data-aos="fade-left" data-aos-delay="300">
                     <figure>
-                        <img class="out-sideimg " src="../images/services-bg.jpg" alt="services">
+                        <img class="out-sideimg " src="{{URL::asset("storage/image/".$activitydata->image1)}}" alt="services">
                     </figure>
                 </div>
                 <div class="col-lg-6 col-md-12 p-0 ms-5" data-aos="fade-right" data-aos-delay="300">
@@ -66,13 +66,13 @@
                         <ul class="row">
                             <li class="col-3"> <b>Description :</b> </li>
                             <li class="col-9 mt-3">
-                                <p style="font-size: 1.4rem;">{{ $activitydata->long_description}}</p>
+                                <p style="font-size: 1.6rem;">{{$activitydata->long_description}}</p>
                             </li>
                         </ul>
                         <ul class="row">
                             <li class="col-3"> <b>Price :</b> </li>
                             <li class="col-1 mt-3">
-                                <p class="px-3" style="font-size: 1.4rem; border:1px solid #04448C"><b>{{ $activitydata->price}}JD</b></p>
+                                <p class="px-3" style="font-size: 1.6rem; "><b>{{ $activitydata->price}}JD</b></p>
                             </li>
                         </ul>
                         <ul class="row p-2 mt-5">

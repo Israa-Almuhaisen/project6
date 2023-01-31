@@ -1,6 +1,6 @@
 @extends('userLayout.master')
 @section('title')
-   
+   My booking
 @endsection
 @section('css')
     
@@ -97,7 +97,7 @@
                   <td class="p-4">{{$value['res_date']	}}</td>
                   <td class="p-4">{{$value['time']	}}</td>
                   <td class="p-4">{{$value['number_of_guest']	}}</td>
-                  <td class="p-4">{{$value['price']	}}</td>
+                  <td class="p-4"> {{$value['price']	}} JD</td>
                   {{-- <td>{{$value['last_name']	}}</td> --}}
                   @if ($value['status']=="Pending")
                   <td class="p-4"><span class="badge bg-warning">Pending</span></td>

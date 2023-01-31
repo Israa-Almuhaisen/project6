@@ -36,19 +36,19 @@
 {{--============= contant ===============--}}
 @section('contant')
 <!-- contact section starts  -->
-{{-- {{dd($key['data']['id'])}} --}}
+{{-- {{dd($key['data']['image1'])}} --}}
 
 <section class="book justify-content-center mx-auto" id="book">
 {{-- @foreach ($booking as $item)
      {{dd($item->id)}}
 @endforeach --}}
-   
+
     <div class="row justify-content-center">
 
         <div class="image">
             {{-- url(../images/rejester.jpg)
             {{URL::asset("images/Waterscooter.gif")}} --}}
-            <img src="{{URL::asset("images/Waterscooter.gif")}}" alt="">
+            <img src="{{URL::asset("storage/image/".$key['data']['image1'])}}" alt="">
         </div>
 
         <form action="{{route('user.book.create',$key['data']['id'])}}" method="POST" class="justify-content-center">
@@ -109,7 +109,9 @@
 
 
                 <h3>Hour</h3>
-                <select name="time" id="cars">
+                <select name="time" style="
+                font-size: 20px;
+            ">
                     <option value="10">10:00:am</option>
                     <option value="11">11:00:am</option>
                     <option value="12">12:00:am</option>

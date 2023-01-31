@@ -92,6 +92,7 @@ class MyreservController extends Controller
     {
         $reservation = Reservation::where('id', $id)->get();
         return view('myReservation.edit',['reservation' => $reservation]);
+        
     }
 
     /**
@@ -103,13 +104,27 @@ class MyreservController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Reservation::findOrfail($id);
+        // dd($id);
+        $request->validate([
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255'],
+            'phoneNumber' => ['required', 'max:10'],
+            'res_date' => ['required'],
+            'time' => ['required'],
 
-        $data->status ="";
-        $data->status ="Accepted";
-        $data->status ="Accepted";
-        $data->status ="Accepted";
-        $data->status ="Accepted";
+
+        ]);
+        $data = Reservation::findOrfail($id);
+        $data->first_name =$request->first_name;
+        $data->last_name =$request->last_name;
+        $data->phoneNumber =$request->phoneNumber;
+        $data->guest_number =$request->guest_number;
+        $data->email =$request->email;
+        $data->time =$request->time;
+        $data->res_date =$request->res_date;
+
+        $data->status ="Pending";
 
         $data->save();
         return redirect()->route('user.myreserve.index');     }
