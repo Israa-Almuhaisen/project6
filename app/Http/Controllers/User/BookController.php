@@ -58,12 +58,10 @@ class BookController extends Controller
             'price' =>   $price,
             'status' => 'Pending',
             'activity_id' => $id,
-            'time' =>$request->time,
-
-
+            'time' =>$request->time
         ]);
 
-        return redirect()->route('user.profile.index');
+        return redirect()->route('user.profile.index')->with('success','Reservation Successful,thank you for booking.');
 
     }
 }

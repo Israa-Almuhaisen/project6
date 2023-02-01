@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->integer('phone')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('image')->default('icon.png');
             $table->string('password');
             $table->boolean('is_admin')->default(0);
             $table->softDeletes();
