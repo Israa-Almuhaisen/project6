@@ -36,7 +36,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('admin.welcome');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified','admin'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -51,7 +51,7 @@ Route::resource('/users',UserController::class);
 Route::resource('/activity',ActivityController::class);
 Route::resource('/reservation',ReservationController::class);
 });
-Route::get('/contact',[ContactUsFormController::class,'createForm'])->name('contact.createForm');
+Route::get('/contact',[ContactUsFormController::class,'createForm'])->name('contact.createForm')->middleware(['auth','verified','admin']);
 
 
 Route::get('/contact/store',[ContactUsFormController::class,'ContactUsForm'])->name('contact.store');
@@ -68,7 +68,7 @@ require __DIR__.'/auth.php';
 
 
 
-Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
+Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])->name('contact.destroy')->middleware(['auth','verified','admin']);
 
 
 
