@@ -274,9 +274,9 @@ header .search-bar-container label input:hover{
   justify-content: center;
   flex-flow: column;
   position: relative;
-   overflow: hidden;
+  overflow: hidden;
    /* background: linear-gradient(to bottom,black,rgba(0, 0, 0, 0.037)); */
-   
+  
 }
 
 /* .home .video-container video{
@@ -287,7 +287,7 @@ header .search-bar-container label input:hover{
   width:100%;
   object-fit: cover;
 } */
- .home .video-container video{
+.home .video-container video{
   position: absolute;
   top:0; left: 0;
   min-width: 100%;

@@ -57,7 +57,7 @@ Users
                 <th>Email</th>
                 <th>Phone Number</th>
                 {{-- <th>Password</th> --}}
-                <th>is_admin</th>
+                <th>Role</th>
                 <th>Delete</th>
               </tr>
             </thead>
@@ -70,7 +70,12 @@ Users
                     <td>{{$value->email	}}</td>
                     <td>{{$value->phone	}}</td>
                     {{-- <td>{{$value->password	}}</td> --}}
-                    <td>{{$value->is_admin	}}</td>
+
+                    @if($value->is_admin==0)
+                      <td>{{"User"}}</td>
+                    @else
+                      <td>{{"Admin"}}</td>
+                    @endif
 
                     <td>
                         <form action="{{Route('admin.users.destroy',$value->id)}}" method="post">
