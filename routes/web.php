@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ActivityController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\ContactUsFormController;
 use App\Http\Controllers\User\MyreservController;
@@ -34,15 +35,19 @@ Route::get('/', function () {
     return view('admin.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('admin.welcome');
-})->middleware(['auth', 'verified','admin'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('admin.dashboard');
+    
+// })->middleware(['auth', 'verified','admin'])->name('dashboard');
 
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
+
+Route::get('/dashboard',[DashboardController::class , 'index'])->middleware(['auth', 'verified','admin'])->name('dashboard');
+
 Route::middleware(['auth','verified','admin'])->name('admin.')->prefix('admin')->group(function()
 {
 
@@ -50,6 +55,8 @@ Route::get('/',[AdminController::class,'index'])->name('index');
 Route::resource('/users',UserController::class);
 Route::resource('/activity',ActivityController::class);
 Route::resource('/reservation',ReservationController::class);
+
+
 });
 Route::get('/contact',[ContactUsFormController::class,'createForm'])->name('contact.createForm')->middleware(['auth','verified','admin']);
 
