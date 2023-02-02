@@ -63,6 +63,7 @@ Reservation
               <th>NO.Guest</th>
               <th>Price</th>
               <th>Status</th>
+              <th>rejected reason</th>
               <th>Activity</th>
               <th>User Name</th>
               <th>Accept</th>
@@ -93,6 +94,8 @@ Reservation
                   <td><span class="badge bg-danger">Rejected</span></td>
 
                   @endif
+
+                  <td>{{$value['rejected_reason']}}</td>
                   <td>{{$value['activity']}}</td>
                   <td>{{$value['user']}}</td>
 

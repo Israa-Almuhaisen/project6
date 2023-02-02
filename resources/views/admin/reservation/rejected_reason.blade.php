@@ -27,9 +27,9 @@ Add rejected reason
       </div> --}}
       <!-- /.card-header -->
       <!-- form start -->
-      <form action="{{Route('admin.reservation.store')}}" method="POST" >
+      <form action="{{Route('reservation.store')}}" method="POST" >
         {{-- @method('PATCH') --}}
-        {{-- @method('PUT') --}}
+        @method('GET')
 
                 @csrf
 
