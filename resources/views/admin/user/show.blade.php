@@ -56,7 +56,7 @@ Users
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone Number</th>
-                <th>Password</th>
+                {{-- <th>Password</th> --}}
                 <th>is_admin</th>
                 <th>Delete</th>
               </tr>
@@ -69,7 +69,7 @@ Users
                     <td>{{$value->name}}</td>
                     <td>{{$value->email	}}</td>
                     <td>{{$value->phone	}}</td>
-                    <td>{{$value->password	}}</td>
+                    {{-- <td>{{$value->password	}}</td> --}}
                     <td>{{$value->is_admin	}}</td>
 
                     <td>
