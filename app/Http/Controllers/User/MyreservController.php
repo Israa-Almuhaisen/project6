@@ -30,6 +30,7 @@ class MyreservController extends Controller
              'time' => $reservation->time,
              'price' => $reservation->price,
              'status' => $reservation->status,
+             'rejected_reason' => $reservation->rejected_reason,
              'activity' => isset($reservation->activity) ? $reservation->activity->name : "",
        ];}
          return view('myReservation.index',['data'=>$data]);

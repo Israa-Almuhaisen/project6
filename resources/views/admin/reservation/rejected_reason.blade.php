@@ -27,22 +27,20 @@ Add rejected reason
       </div> --}}
       <!-- /.card-header -->
       <!-- form start -->
-      <form action="{{route('admin.activity.update',$data->id)}}" method="POST" files=true enctype="multipart/form-data" >
+      <form action="{{Route('admin.reservation.store')}}" method="POST" >
         {{-- @method('PATCH') --}}
-        @method('PUT')
+        {{-- @method('PUT') --}}
 
                 @csrf
 
             <div class="card-body">
             
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Short description</label>
-                  <input type="text" name="short_description" class="form-control" id="" placeholder="" value="{{$data->short_description}}">
+                    <input type="hidden" name="id_rejected" class="form-control" id="" placeholder="" value="{{$id}}">
+
+                  <label for="exampleInputPassword1">Add Rejected Reason</label>
+                  <input type="text" name="rejected_reason" class="form-control" id="" placeholder="" value="">
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Long description</label>
-                    <input type="text" name="long_description" class="form-control" id="" placeholder="" value="{{$data->long_description}}">
-                  </div>
                
         <div>
         
@@ -50,7 +48,7 @@ Add rejected reason
         <!-- /.card-body -->
   
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-primary">Rejected</button>
             </div>
       </form>
     </div>

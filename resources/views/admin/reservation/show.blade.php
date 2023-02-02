@@ -106,8 +106,8 @@ Reservation
                   </td>
               
                 <td>
-                <form action="{{Route('admin.reservation.destroy',$value['id'])}}" method="POST">
-                  @method('delete')
+                <form action="{{Route('reservation.rejected',$value['id'])}}" method="POST">
+                  @method('GET')
                   {{-- Pending --}}
                   @csrf
                   <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Rejected</button>

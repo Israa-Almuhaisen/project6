@@ -65,7 +65,7 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-
+        
     }
 
     /**
@@ -118,12 +118,6 @@ class ReservationController extends Controller
     public function destroy($id)
     {
 
-        $data = Reservation::findOrfail($id);
-        $data->status ="Rejected";
-        $data->save();
-        return redirect()->route('admin.reservation.index');
-        // Reservation::findOrfail($id)->delete();
-        // return redirect()->route('admin.reservation.index');
         
     }
 

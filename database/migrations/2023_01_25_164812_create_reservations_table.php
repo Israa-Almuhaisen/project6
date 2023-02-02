@@ -24,6 +24,7 @@ return new class extends Migration
             $table->foreignId('user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->foreignId('activity_id')->references('id')->on('activities')->cascadeOnDelete();
 
+            $table->string('rejected_reason')->default(' ');
             $table->string('status')->default('Pending');
             $table->integer('number_of_guest');
             $table->date('res_date');
