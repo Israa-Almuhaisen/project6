@@ -12,8 +12,6 @@ public function index(){
 
         return view('admin.login');
 
-
-
 }
 
 
