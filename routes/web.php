@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\rejectedController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Search;
 use App\Http\Controllers\User\ActivityDetailsController;
@@ -68,6 +69,10 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])->name('contact.destroy')->middleware(['auth','verified','admin']);
+
+Route::get('/reservation/store', [rejectedController::class, 'store'])->name('reservation.store')->middleware(['auth','verified','admin']);
+Route::get('/reservation/{id}', [rejectedController::class, 'rejected'])->name('reservation.rejected')->middleware(['auth','verified','admin']);
+
 
 
 

@@ -28,18 +28,7 @@ class Admin extends Seeder
         'is_admin' => 1
 
         
-        ]);
-
-        User::create ([
-        
-        'name' => 'Amro',
-        'email' => 'shandaqamro@gmail.com',
-        'phone' => '0799379762',
-        'password' => bcrypt('123456789'),
-        'is_admin' => 1
-
-        
-        ]);
+        ]);;
      
     }
 }

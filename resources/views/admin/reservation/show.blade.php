@@ -63,6 +63,7 @@ Reservation
               <th>NO.Guest</th>
               <th>Price</th>
               <th>Status</th>
+              <th>rejected reason</th>
               <th>Activity</th>
               <th>User Name</th>
               <th>Accept</th>
@@ -93,6 +94,8 @@ Reservation
                   <td><span class="badge bg-danger">Rejected</span></td>
 
                   @endif
+
+                  <td>{{$value['rejected_reason']}}</td>
                   <td>{{$value['activity']}}</td>
                   <td>{{$value['user']}}</td>
 
@@ -106,8 +109,8 @@ Reservation
                   </td>
               
                 <td>
-                <form action="{{Route('admin.reservation.destroy',$value['id'])}}" method="POST">
-                  @method('delete')
+                <form action="{{Route('reservation.rejected',$value['id'])}}" method="POST">
+                  @method('GET')
                   {{-- Pending --}}
                   @csrf
                   <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Rejected</button>

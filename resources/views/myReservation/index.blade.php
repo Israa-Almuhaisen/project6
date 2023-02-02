@@ -81,6 +81,7 @@
               <th class="text-white  p-4">NO.Guest</th>
               <th class="text-white  p-4">Price</th>
               <th class="text-white  p-4">Status</th>
+              <th class="text-white  p-4">rejected reason</th>
               <th class="text-white  p-4">Edit</th>
               <th class="text-white  p-4">Delete</th>
 
@@ -112,11 +113,11 @@
                   <td class="p-4"><span class="badge bg-danger">Rejected</span></td>
 
                   @endif
-
+     <td>               {{$value['rejected_reason']	}}               </td>
                   <td class="p-4"><a href="{{Route('user.myreserve.edit',$value['id'])}}"><button type="button" class="btn btn-block bg-success bg-gradient btn-sm fs-3 align-middle">Edit</button>
                   </a></td>
                   
-              
+         
                 <td class="p-4">
                   <form action="{{Route('user.myreserve.destroy',$value['id'])}}" method="POST" class=""> 
                     @method('DELETE')

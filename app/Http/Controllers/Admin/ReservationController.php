@@ -29,6 +29,7 @@ class ReservationController extends Controller
                 'res_date' => $reservation->res_date,
                 'price' => $reservation->price,
                 'status' => $reservation->status,
+                'rejected_reason' => $reservation->rejected_reason,
                 'activity' => isset($reservation->activity) ? $reservation->activity->name : "",
                 'user' => isset($reservation->user) ? $reservation->user->name : "",
                 'time' => $reservation->time,
@@ -65,7 +66,7 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-
+        
     }
 
     /**
@@ -118,12 +119,6 @@ class ReservationController extends Controller
     public function destroy($id)
     {
 
-        $data = Reservation::findOrfail($id);
-        $data->status ="Rejected";
-        $data->save();
-        return redirect()->route('admin.reservation.index');
-        // Reservation::findOrfail($id)->delete();
-        // return redirect()->route('admin.reservation.index');
         
     }
 
