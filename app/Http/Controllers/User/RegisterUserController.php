@@ -45,14 +45,19 @@ class RegisterUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'phone' => ['required', 'max:10'],
-            'password' => ['required', 'min:8'],
+            // 'password' => ['required', 'min:8'],
+            'image' => 'required|mimes:jpeg,png,jpg,gif,jfif'
         ]);
+        // dd($request->file('image'));
+        $user = $request->file('image')->getClientOriginalName();
+        $request->file('image')->storeAs('pro',$user);
+
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'password' => Hash::make($request->password),
             // 'password' => Hash::make($request->password),
+            'image' => $user,
             'is_admin' => false,
 
         ]);

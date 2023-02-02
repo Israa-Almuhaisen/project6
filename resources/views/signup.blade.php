@@ -38,7 +38,7 @@
 									</p>
 								</div>
 			      	</div>
-							<form action="{{route('user.signup.store')}}" method="post" class="signin-form">
+							<form action="{{route('user.signup.store')}}" method="post" class="signin-form" enctype="multipart/form-data">
                                 {{-- @method('GET') --}}
 
                                 @csrf
@@ -55,7 +55,7 @@
 
                         {{-- ___________________email____________________ --}}
 		            <div class="form-group">
-		              <input id="password-field" type="email" class="form-control" name="email" value="{{ old('email')}}"  class="@error('email') is-invalid @enderror">
+		              <input type="email" class="form-control" name="email" value="{{ old('email')}}"  class="@error('email') is-invalid @enderror">
 		              <label class="form-control-placeholder" for="">Email</label> 
                       
                       @error('email')
@@ -66,7 +66,7 @@
 
                     {{-- ____________________number___________________ --}}
                     <div class="form-group">
-                        <input id="password-field" type="number" name="phone" class="form-control" value="{{ old('phone')}}" class="@error('phone') is-invalid @enderror">
+                        <input type="number" name="phone" class="form-control" value="{{ old('phone')}}" class="@error('phone') is-invalid @enderror">
                         <label class="form-control-placeholder" for="">Number</label> 
                         
                         @error('phone')
@@ -87,6 +87,20 @@
 
 
                     {{-- _______________________________________ --}}
+					<div class="form-group">
+						<label for="exampleInputFile">Image</label>
+						<div class="input-group">
+						  <div class="custom-file">
+							<input type="file" class="custom-file-input"  name="image" class="@error('image') is-invalid @enderror">
+	  
+							<label class="custom-file-label" for="exampleInputFile">Choose file</label>
+						  </div>
+		
+					  </div>
+					  @error('image')
+					  <div class="alert alert-danger">{{ $message }}</div>
+					 @enderror
+					  </div>
                     {{-- _________________submit______________________ --}}
 
 		            <div class="form-group">

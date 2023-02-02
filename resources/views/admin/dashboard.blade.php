@@ -22,29 +22,77 @@ control panel
 <section class="content">
     <div class="container-fluid">
       <!-- Small boxes (Stat box) -->
+
+
+
+
+      {{-- Reservation --}}
       <div class="row">
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-info">
             <div class="inner">
-              <h3>150</h3>
+              <h3>{{$totalReservation}}</h3>
 
-              <p>New Orders</p>
+              <p> Total Reservation </p>
             </div>
             <div class="icon">
               <i class="ion ion-bag"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
+
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>{{$todayReservation}}</h3>
+
+              <p> All Reservation For Today </p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>{{$thisMonthReservation}}</h3>
+
+              <p> All Reservation For this Month </p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>{{$thisYearReservation}}</h3>
+
+              <p> All Reservation For this Year </p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+
+
         </div>
-        <!-- ./col -->
+
+
+      
+        {{-- Activities --}}
+        <!-- ./col activity  -->
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-success">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3>{{$totalActivities}}</h3>
+              {{-- <sup style="font-size: 20px">%</sup> --}}
 
-              <p>Bounce Rate</p>
+              <p> Total Activities </p>
             </div>
             <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -52,29 +100,71 @@ control panel
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
+         
+
+
+
+
+
+
+
+
+        {{-- Users --}}
         <!-- ./col -->
         <div class="col-lg-3 col-6">
+
+
           <!-- small box -->
           <div class="small-box bg-warning">
             <div class="inner">
-              <h3>44</h3>
+              <h3>{{ $totalAllUser }}</h3>
 
-              <p>User Registrations</p>
+              <p> Total All  Users </p>
             </div>
             <div class="icon">
               <i class="ion ion-person-add"></i>
             </div>
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>{{ $totalUser }}</h3>
+
+              <p>  All  Users </p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>{{ $totalAdmin }}</h3>
+
+              <p>  All  Admin </p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          </div>
+
+
         </div>
+        <!-- ./col -->
+
+       
+        {{-- Admin --}}
         <!-- ./col -->
         <div class="col-lg-3 col-6">
           <!-- small box -->
           <div class="small-box bg-danger">
             <div class="inner">
-              <h3>65</h3>
+              <h3>{{$totalAdmin}}</h3>
 
-              <p>Unique Visitors</p>
+              <p> All Admin </p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
@@ -82,8 +172,14 @@ control panel
             <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
           </div>
         </div>
+        </div>
         <!-- ./col -->
-      </div>
+
+
+
+
+
+ 
       <!-- /.row -->
       <!-- Main row -->
       <div class="row">

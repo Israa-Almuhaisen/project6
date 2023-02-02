@@ -14,12 +14,21 @@ background-size: cover;
    }
 
    .bg-dark{
+
+
      background-image: linear-gradient(180deg, #0e2a47,#04458f) !important;
+
    }
+
 </style>
 
 @endsection
+
 @section('showCase')  
+
+
+
+
 <div class="container-fluid position-relative p-0">
     <div class="container-fluid py-5 mb-5 hero-header">
         <div class="container py-5">
@@ -39,6 +48,12 @@ background-size: cover;
                       </div>
             </div>
         </div>
+@if(session()->get('success'))
+<div class="alert alert-success" style="width: 300px;" >
+{{ session()->get('success') }}
+</div>
+@endif
+
     </div>
 </div> 
 @endsection
@@ -54,8 +69,8 @@ background-size: cover;
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
 
-                    <img src="/images/people1.jpeg" alt="{{auth()->user()->name}}"  width="150">
-                
+                    <img src="{{URL::asset("storage/pro/".auth()->user()->image)}}" alt="{{auth()->user()->name}}"  width="150">
+                  
                         
           
                     <div class="mt-3">
